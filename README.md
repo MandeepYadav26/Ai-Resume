@@ -37,7 +37,7 @@ Ai Resume/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/Ai-Resume.git
+   git clone https://github.com/MandeepYadav26/Ai-Resume.git
    cd Ai-Resume
    ```
 
