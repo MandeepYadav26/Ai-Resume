@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Checker & Candidate Screener</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <div class="logo-icon">⚡</div>
+                <span>AI Resume Checker</span>
+            </div>
+            <div class="mode-tabs">
+                <button type="button" class="tab-btn active" id="tab-recruiter">👔 Recruiter Mode</button>
+                <button type="button" class="tab-btn" id="tab-jobseeker">🎯 Job Seeker Mode</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="card app-grid-full">
+            <form id="analyzerForm" enctype="multipart/form-data">
+                <div class="app-grid">
+                    <!-- Left Column: Job Description -->
+                    <div>
+                        <div class="card-header">
+                            <span style="font-size: 1.4rem;">📝</span>
+                            <h2 class="card-title">Job Description</h2>
+                        </div>
+                        <label for="job-desc">Paste the job requirements, tech stack, & skills:</label>
+                        <textarea id="job-desc" name="job_description" placeholder="e.g. We are looking for a Senior Python Developer with strong experience in Flask, Django, PostgreSQL, Docker, AWS, and Machine Learning..." required></textarea>
+                    </div>
+
+                    <!-- Right Column: Upload Resumes -->
+                    <div>
+                        <div class="card-header">
+                            <span style="font-size: 1.4rem;">📄</span>
+                            <h2 class="card-title">Upload Resumes (PDF)</h2>
+                        </div>
+                        <label>Upload candidate PDF files for screening:</label>
+                        <div class="dropzone" id="dropzone">
+                            <div class="dropzone-icon">☁️</div>
+                            <div id="dropzone-text" style="font-weight: 500;">
+                                Drag & Drop PDF Resumes here, or click to browse (Multiple files allowed)
+                            </div>
+                            <input type="file" id="resumes-input" name="resumes" class="file-input" accept=".pdf" multiple required>
+                            <div class="file-list" id="file-list-display"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit" id="submit-btn">
+                    <div class="spinner" id="spinner"></div>
+                    <span id="submit-btn-text">Match & Rank Candidates</span>
+                </button>
+            </form>
+        </div>
+
+        <!-- Analytics Summary Stats (Shown in Recruiter Mode) -->
+        <div class="analytics-bar" id="analytics-bar" style="display: none;">
+            <div class="stat-card">
+                <div class="stat-icon">👥</div>
+                <div>
+                    <div class="stat-value" id="stat-total">0</div>
+                    <div class="stat-label">Total Candidates</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📊</div>
+                <div>
+                    <div class="stat-value" id="stat-avg">0%</div>
+                    <div class="stat-label">Average Match Score</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🏆</div>
+                <div>
+                    <div class="stat-value" id="stat-top" style="font-size: 1.1rem;">-</div>
+                    <div class="stat-label">Top Candidate</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Output Container -->
+        <div id="results-container"></div>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

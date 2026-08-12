@@ -1,0 +1,21 @@
+# Virtual environment
+.venv/
+venv/
+ENV/
+env/
+
+# Python byte-compiled / module files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Uploaded files and temporary outputs
+uploads/*
+!uploads/.gitkeep
+matched_candidates.csv
+
+# IDE and OS metadata
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
