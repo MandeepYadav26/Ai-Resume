@@ -10,19 +10,25 @@ AI Resume Analyzer is a Flask-based web application designed to evaluate, rank, 
 - Skill Match Analysis: Highlights matched skills, missing required skills, and additional resume skills.
 - TF-IDF Cosine Similarity: Evaluates contextual and semantic alignment between job requirements and resume text.
 - CSV Export: Automatically generates a structured `matched_candidates.csv` summary of screening results.
+- Automated Testing & CI/CD: Includes unit testing suite and GitHub Actions workflow for continuous integration.
 
 ## Project Structure
 
 ```
 Ai Resume/
+├── .github/
+│   └── workflows/
+│       └── ci.yml          # GitHub Actions CI automation workflow
 ├── app.py                  # Flask Web Application routes and API endpoints
 ├── resume_analyzer.py      # Core NLP, text parsing, and scoring logic
+├── test_resume_analyzer.py # Unit tests for analyzer logic
 ├── templates/
 │   └── index.html          # Frontend dashboard user interface
 ├── static/                 # Static assets (CSS, JS, images)
 ├── uploads/                # Temporary directory for uploaded PDF files
 ├── matched_candidates.csv  # Auto-generated candidate summary export
 ├── requirements.txt        # Python package dependencies
+├── LICENSE                 # MIT Open Source License
 └── README.md               # Project documentation
 ```
 
@@ -63,6 +69,14 @@ Ai Resume/
    python -m spacy download en_core_web_sm
    ```
 
+## Running Unit Tests
+
+Run the test suite to verify all core components:
+
+```bash
+python -m unittest test_resume_analyzer.py
+```
+
 ## Running the Application
 
 1. Start the Flask application:
@@ -85,4 +99,9 @@ Ai Resume/
 
 - Backend: Python, Flask, Werkzeug
 - Data Processing & NLP: PyPDF2 / pypdf, scikit-learn (TF-IDF), spaCy, Regular Expressions
+- Testing & CI: Python unittest, GitHub Actions
 - Frontend: HTML5, CSS3, JavaScript
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
