@@ -10,12 +10,12 @@
     <header>
         <div class="container header-content">
             <div class="logo">
-                <div class="logo-icon">⚡</div>
+                <div class="logo-icon"></div>
                 <span>AI Resume Checker</span>
             </div>
             <div class="mode-tabs">
-                <button type="button" class="tab-btn active" id="tab-recruiter">👔 Recruiter Mode</button>
-                <button type="button" class="tab-btn" id="tab-jobseeker">🎯 Job Seeker Mode</button>
+                <button type="button" class="tab-btn active" id="tab-recruiter"> Recruiter Mode</button>
+                <button type="button" class="tab-btn" id="tab-jobseeker"> Job Seeker Mode</button>
             </div>
         </div>
     </header>
@@ -27,7 +27,7 @@
                     <!-- Left Column: Job Description -->
                     <div>
                         <div class="card-header">
-                            <span style="font-size: 1.4rem;">📝</span>
+                            <span style="font-size: 1.4rem;"></span>
                             <h2 class="card-title">Job Description</h2>
                         </div>
                         <label for="job-desc">Paste the job requirements, tech stack, & skills:</label>
@@ -37,12 +37,14 @@
                     <!-- Right Column: Upload Resumes -->
                     <div>
                         <div class="card-header">
-                            <span style="font-size: 1.4rem;">📄</span>
+                            <span style="font-size: 1.4rem;"></span>
                             <h2 class="card-title">Upload Resumes (PDF)</h2>
                         </div>
                         <label>Upload candidate PDF files for screening:</label>
                         <div class="dropzone" id="dropzone">
-                            <div class="dropzone-icon">☁️</div>
+                            <div class="dropzone-icon">
+                                <img src="https://freesvg.org/img/1400625045.png" alt="">
+                            </div>
                             <div id="dropzone-text" style="font-weight: 500;">
                                 Drag & Drop PDF Resumes here, or click to browse (Multiple files allowed)
                             </div>
@@ -62,21 +64,21 @@
         <!-- Analytics Summary Stats (Shown in Recruiter Mode) -->
         <div class="analytics-bar" id="analytics-bar" style="display: none;">
             <div class="stat-card">
-                <div class="stat-icon">👥</div>
+                <div class="stat-icon"></div>
                 <div>
                     <div class="stat-value" id="stat-total">0</div>
                     <div class="stat-label">Total Candidates</div>
                 </div>
             </div>
             <div class="stat-card">
-                <div class="stat-icon">📊</div>
+                <div class="stat-icon"></div>
                 <div>
                     <div class="stat-value" id="stat-avg">0%</div>
                     <div class="stat-label">Average Match Score</div>
                 </div>
             </div>
             <div class="stat-card">
-                <div class="stat-icon">🏆</div>
+                <div class="stat-icon"></div>
                 <div>
                     <div class="stat-value" id="stat-top" style="font-size: 1.1rem;">-</div>
                     <div class="stat-label">Top Candidate</div>
