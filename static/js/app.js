@@ -173,9 +173,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     <div class="candidate-info">
                         <h3>#${index + 1} ${c.name}</h3>
                         <div class="candidate-meta">
-                            <span>📄 ${c.filename}</span>
-                            <span>✉️ ${c.email}</span>
-                            <span>📞 ${c.phone}</span>
+                            <span> ${c.filename}</span>
+                            <span> ${c.email}</span>
+                            <span> ${c.phone}</span>
                         </div>
                     </div>
                     <div class="score-badge" style="--score-color: ${scoreColor}; --score-percent: ${c.score}%;">
