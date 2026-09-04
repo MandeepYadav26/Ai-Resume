@@ -1,0 +1,25 @@
+.git
+.gitignore
+.gitattributes
+
+# Environments
+.env
+.venv
+venv/
+ENV/
+env/
+
+# Python caching
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# Logs and temp files
+*.log
+uploads/*
+!uploads/.gitkeep
